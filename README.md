@@ -8,9 +8,13 @@ This UI component library works on top of tailwindcss, so first make sure that y
 
 [Tailwind CSS](https://tailwindcss.com/docs/installation/framework-guides)
 
-Assuming that you have tailwind running just install this package
+Assuming that you have tailwind running just install the package
 
 `npm i react-ds-jech33`
+
+And add the minified css to the root of your app
+
+`import 'react-ds-jech33/dist/tailwind.css'`
 
 Then just start importing any component you want!
 

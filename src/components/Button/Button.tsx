@@ -22,8 +22,8 @@ export const Button = (props: ButtonProps) => {
     <button
       className={twMerge(
         buttonStyles({ ...defaultValues }),
-        className,
-        rest.disabled && buttonDisabledStyles()
+        rest.disabled && buttonDisabledStyles(),
+        className
       )}
       {...rest}
     >

@@ -2,30 +2,51 @@
 
 UI design system built in React with tailwind css
 
-## React + TypeScript + Vite
+## React + TypeScript + Tailwind
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This UI component library works on top of tailwindcss, so first make sure that you have tailwind up and running
 
-Currently, two official plugins are available:
+[Tailwind CSS](https://tailwindcss.com/docs/installation/framework-guides)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Assuming that you have tailwind running just install this package
 
-## Expanding the ESLint configuration
+`npm i react-ds-jech33`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
+Then just start importing any component you want!
 
 ```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+import { Button as JButton } from "react-ds-jech33";
+
+export default function Page() {
+return (
+   <>
+      <JButton className="bg-red-500" />
+   </>
+);
+}
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Eslint & Prettier
+
+We recommend setting up your environment with Eslint and Prettier for a good development experience.
+
+- Configure the top-level `parser, parserOptions and settings` properties like this:
+
+```js
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ["src"],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
+      },
+    },
+  },
+```

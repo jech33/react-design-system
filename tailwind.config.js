@@ -98,7 +98,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: ['prettier-plugin-tailwindcss'],
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   future: {
     hoverOnlyWhenSupported: true,

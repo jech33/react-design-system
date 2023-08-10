@@ -28,6 +28,14 @@ const meta = {
         defaultValue: { summary: 'primary' },
       },
     },
+    btnType: {
+      description: 'The type of the button',
+      defaultValue: 'solid',
+      control: 'select',
+      table: {
+        defaultValue: { summary: 'solid' },
+      },
+    },
     fullWidth: {
       description: 'Whether the button should take up the full width of its container',
       defaultValue: false,
@@ -54,18 +62,32 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Default: Story = {
   args: {
+    btnType: 'solid',
     variant: 'primary',
+    fullWidth: false,
   },
 };
 
-export const Disabled: Story = {
+export const Solid: Story = {
   args: {
-    disabled: true,
+    btnType: 'solid',
+    variant: 'primary',
+    fullWidth: false,
   },
 };
 
-export const FullWidth: Story = {
+export const Outlined: Story = {
   args: {
-    fullWidth: true,
+    btnType: 'outline',
+    variant: 'primary',
+    fullWidth: false,
+  },
+};
+
+export const Link: Story = {
+  args: {
+    btnType: 'link',
+    variant: 'primary',
+    fullWidth: false,
   },
 };

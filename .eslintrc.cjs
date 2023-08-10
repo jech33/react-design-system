@@ -3,7 +3,15 @@ module.exports = {
   env: { browser: true, node: true, amd: true },
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y', 'prettier', 'react-refresh'],
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:import/errors', 'plugin:import/recommended', 'plugin:jsx-a11y/recommended', 'plugin:storybook/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:import/errors',
+    'plugin:import/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
+  ],
   rules: {
     '@next/next/no-html-link-for-pages': 'off',
     'react/prop-types': 0,

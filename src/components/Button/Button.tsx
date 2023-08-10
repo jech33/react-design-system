@@ -3,11 +3,25 @@ import { ButtonProps } from './Button.types';
 import { buttonDisabledStyles, buttonStyles } from './Button.styles';
 
 const Button = (props: ButtonProps) => {
-  const { variant, fullWidth, className, label = 'Button', ...rest } = props;
+  const {
+    variant = 'primary',
+    fullWidth,
+    btnType = 'solid',
+    className,
+    label = 'Button',
+    ...rest
+  } = props;
+
+  const defaultValues = {
+    variant: variant || 'primary',
+    fullWidth: fullWidth || false,
+    btnType: btnType || 'solid',
+  };
+
   return (
     <button
       className={twMerge(
-        buttonStyles({ variant, fullWidth }),
+        buttonStyles({ ...defaultValues }),
         className,
         rest.disabled && buttonDisabledStyles()
       )}

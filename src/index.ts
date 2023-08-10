@@ -1,3 +1,4 @@
-import Components from './components';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import * as React from 'react';
 
-export default Components;
+export * from './components';

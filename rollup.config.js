@@ -4,8 +4,7 @@ import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-
-const packageJson = require('./package.json');
+import packageJson from './package.json';
 
 export default [
   {
@@ -29,7 +28,7 @@ export default [
       typescript({ tsconfig: './tsconfig.json' }),
       terser(),
     ],
-    external: ['react', 'class-variance-authority'],
+    external: ['react', 'react-dom'],
   },
   {
     input: 'src/index.ts',

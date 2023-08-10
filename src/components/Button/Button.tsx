@@ -2,7 +2,7 @@ import { twMerge } from 'tailwind-merge';
 import { ButtonProps } from './Button.types';
 import { buttonDisabledStyles, buttonStyles } from './Button.styles';
 
-const Button = (props: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   const {
     variant = 'primary',
     fullWidth,
@@ -31,5 +31,3 @@ const Button = (props: ButtonProps) => {
     </button>
   );
 };
-
-export default Button;
